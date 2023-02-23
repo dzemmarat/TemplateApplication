@@ -11,6 +11,11 @@
     <ID>TooGenericExceptionThrown:PrintTestApks.kt$PrintApkLocationTask$throw RuntimeException("Cannot load APKs")</ID>
     <ID>TooGenericExceptionThrown:PrintTestApks.kt$PrintApkLocationTask$throw RuntimeException("Expected one APK !")</ID>
     <ID>ThrowsCount:PrintTestApks.kt$PrintApkLocationTask$@TaskAction fun taskAction()</ID>
+    <ID>InvalidPackageDeclaration:AndroidCompose.kt$package ru.mrz.template</ID>
+    <ID>InvalidPackageDeclaration:AndroidFeature.kt$package ru.mrz.template</ID>
+    <ID>InvalidPackageDeclaration:Flavor.kt$package ru.mrz.template</ID>
+    <ID>EnumNaming:Flavor.kt$FlavorDimension$contentType</ID>
+    <ID>InvalidPackageDeclaration:KotlinAndroid.kt$package ru.mrz.template</ID>
   </ManuallySuppressedIssues>
   <CurrentIssues/>
 </SmellBaseline>
