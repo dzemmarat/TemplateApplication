@@ -13,12 +13,9 @@ internal fun Project.configureFeature(
 
     commonExtension.apply {
         dependencies {
-            // TODO: Delete if unused
-//            add("implementation", project(":core:designsystem"))
-//            add("implementation", project(":core:models"))
-//            add("implementation", project(":core:navigation"))
-//            add("implementation", project(":core:utils"))
-//            add("implementation", project(":core:data:api"))
+            add("implementation", project(":core:ui"))
+            add("implementation", project(":core:common"))
+            add("implementation", project(":core:navigation"))
 
             // AndroidX
             add("implementation", libs.findBundle("androidx").get())

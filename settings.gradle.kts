@@ -6,7 +6,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven { url = uri("https://jitpack.io" ) }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io" ) }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
@@ -30,6 +30,12 @@ include(":app")
 include(
     ":core:common",
     ":core:ui",
+    ":core:navigation",
 )
 
 // Features
+include(
+    ":feature:home",
+    ":feature:add",
+    ":feature:profile",
+)

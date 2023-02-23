@@ -78,9 +78,6 @@ detekt_version = "1.22.0"
 ktlint = "0.45.2"
 ktlint_gradle = "10.2.1"
 
-#Pretty Logger
-pretty_logger_version = "1.0.2"
-
 [libraries]
 # Gradle
 gradle_build = { group = "com.android.tools.build", name = "gradle", version.ref = "android_plugin_version" }
@@ -173,9 +170,6 @@ paging_compose = { group = "androidx.paging", name = "paging-compose", version.r
 
 # Permission
 permission = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "permission_version" }
-
-# Pretty Logger
-pretty_logger = { group = "online.profsoft.gitlab.AndroidTools", name = "prettyloggerlybrary", version.ref = "pretty_logger_version" }
 
 # Gson
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson_version" }
@@ -271,8 +265,6 @@ detekt = [
 ]
 
 permission = ["permission"]
-
-prettylogger = ["pretty_logger"]
 
 [plugins]
 android_application = { id = "com.android.application", version.ref = "android_plugin_version" }

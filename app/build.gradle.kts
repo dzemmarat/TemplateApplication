@@ -52,5 +52,29 @@ android {
 
 dependencies {
     implementation(projects.core.common)
+    implementation(projects.core.navigation)
     implementation(projects.core.ui)
+    implementation(projects.feature.home)
+    implementation(projects.feature.add)
+    implementation(projects.feature.profile)
+
+    // AndroidX
+    implementation(libs.bundles.androidx)
+    implementation(libs.android.core.splash)
+
+    // Accompanist
+    implementation(libs.bundles.accompanist)
+
+    // Koin
+    implementation(libs.bundles.koin)
+
+    // Orbit
+    implementation(libs.bundles.orbit)
+
+    // TEST
+    testImplementation(libs.bundles.test)
+    debugImplementation(libs.compose.debug.test.manifest)
+
+    // Navigator
+    implementation(libs.bundles.navigator)
 }
