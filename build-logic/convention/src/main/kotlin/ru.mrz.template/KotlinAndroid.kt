@@ -1,7 +1,7 @@
 package ru.mrz.template
 
+import AppSettings
 import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.api.plugins.ExtensionAware
@@ -16,16 +16,17 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>,
 ) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
     commonExtension.apply {
-        compileSdk = 33
+        compileSdk = libs.findVersion("compile_sdk_version").get().toString().toInt()
 
         defaultConfig {
-            minSdk = 24
+            minSdk = libs.findVersion("min_sdk_version").get().toString().toInt()
         }
 
         compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_17
-            targetCompatibility = JavaVersion.VERSION_17
+            sourceCompatibility = AppSettings.JAVA_VERSION
+            targetCompatibility = AppSettings.JAVA_VERSION
             isCoreLibraryDesugaringEnabled = true
         }
 
@@ -43,12 +44,9 @@ internal fun Project.configureKotlinAndroid(
                 "-opt-in=kotlin.Experimental",
             )
 
-            // Set JVM target to 11
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = AppSettings.JAVA_VERSION.toString()
         }
     }
-
-    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
     dependencies {
         add("coreLibraryDesugaring", libs.findLibrary("android.desugar.jdk.libs").get())

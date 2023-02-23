@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "ru.mrz.templateapplication"
-    compileSdk = 33
+    compileSdk = libs.versions.compile.sdk.version.get().toInt()
 
     defaultConfig {
-        applicationId = "ru.mrz.templateapplication"
-        versionCode = 1
-        versionName = "0.0.1" // X.Y.Z; X = Major, Y = minor, Z = Patch level
+        applicationId = AppSettings.APP_ID
+        versionCode = AppSettings.APP_VERSION_CODE
+        versionName = AppSettings.APP_VERSION_NAME
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         vectorDrawables {
             useSupportLibrary = true

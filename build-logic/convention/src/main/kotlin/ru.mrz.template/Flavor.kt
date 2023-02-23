@@ -6,22 +6,22 @@ import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
 
 enum class FlavorDimension {
-    contentType
+    ContentType
 }
 
 // The content for the app can either come from local static data which is useful for demo
 // purposes, or from a production backend server which supplies up-to-date, real content.
 // These two product flavors reflect this behaviour.
 enum class Flavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
-    dev(FlavorDimension.contentType, ".dev"),
-    prod(FlavorDimension.contentType)
+    Dev(FlavorDimension.ContentType, ".dev"),
+    Prod(FlavorDimension.ContentType)
 }
 
 fun Project.configureFlavors(
     commonExtension: CommonExtension<*, *, *, *>
 ) {
     commonExtension.apply {
-        flavorDimensions += FlavorDimension.contentType.name
+        flavorDimensions += FlavorDimension.ContentType.name
         productFlavors {
             Flavor.values().forEach {
                 create(it.name) {
