@@ -23,4 +23,13 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "TemplateApplication"
 
+// Apps
 include(":app")
+
+// Core
+include(
+    ":core:common",
+    ":core:ui",
+)
+
+// Features

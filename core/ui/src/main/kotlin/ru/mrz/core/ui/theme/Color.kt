@@ -1,4 +1,4 @@
-package ru.mrz.templateapplication.ui.theme
+package ru.mrz.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

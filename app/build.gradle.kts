@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.mrz.templateapplication"
+    namespace = "ru.mrz.template"
     compileSdk = libs.versions.compile.sdk.version.get().toInt()
 
     defaultConfig {
@@ -50,4 +50,7 @@ android {
     }
 }
 
-dependencies {}
+dependencies {
+    implementation(projects.core.common)
+    implementation(projects.core.ui)
+}

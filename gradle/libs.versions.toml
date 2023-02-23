@@ -75,6 +75,8 @@ gson_version = "2.9.0"
 # Detekt
 detekt_compose_rules_version = "1.2.2"
 detekt_version = "1.22.0"
+ktlint = "0.45.2"
+ktlint_gradle = "10.2.1"
 
 #Pretty Logger
 pretty_logger_version = "1.0.2"
@@ -180,6 +182,7 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson_vers
 
 # Detekt
 detekt = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt_version" }
+detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt_version" }
 
 [bundles]
 androidx = [
@@ -228,6 +231,7 @@ test = [
     "turbine",
     "mockk",
     "robolectric",
+    "coroutines_test",
     "orbit_test",
     "koin_test"
 ]
@@ -277,3 +281,4 @@ android_test = { id = "com.android.test", version.ref = "android_plugin_version"
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
 kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin_version" }
 kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt_version" }
