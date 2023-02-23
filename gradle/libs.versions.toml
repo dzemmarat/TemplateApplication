@@ -1,9 +1,9 @@
 [versions]
 # Plugin
-android_plugin_version = "7.3.1"
+android_plugin_version = "7.4.1"
 
 # Desugar
-androidDesugarJdkLibs = "2.0.2"
+android_desugar_jdk_libs_version = "1.2.0"
 
 # DI
 koin_version = "3.3.0"
@@ -15,7 +15,7 @@ orbit_version = "4.4.0"
 kotlin_version = "1.7.20"
 serialization_json_version = "1.4.0"
 coroutines_version = "1.6.4"
-ksp = "1.7.10-1.0.6"
+ksp_version = "1.7.10-1.0.6"
 
 # Android Jetpack
 appcompat_version = "1.5.1"
@@ -26,6 +26,7 @@ splash_version = "1.0.0"
 
 # Jetpack Compose
 compose_version = "1.3.3"
+compose_material3_version = "1.0.1"
 compose_bom_version = "2023.01.00"
 compose_compiler_version = "1.2.0"
 activity_compose_version = "1.6.1"
@@ -80,7 +81,7 @@ gradle_build = { group = "com.android.tools.build", name = "gradle", version.ref
 kotlin_gradle_build = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin_version" }
 
 # Desugar
-android_desugar_jdk_libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+android_desugar_jdk_libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "android_desugar_jdk_libs_version" }
 
 # Kotlin
 coroutines_core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines_version" }
@@ -95,7 +96,7 @@ lifecycle_runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-kt
 # Compose
 compose_ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose_version" }
 compose_bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose_bom_version" }
-compose_material = { group = "androidx.compose.material", name = "material", version.ref = "compose_version" }
+compose_material = { group = "androidx.compose.material3", name = "material3", version.ref = "compose_material3_version" }
 compose_tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose_version" }
 compose_tooling_preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "compose_version" }
 activity_compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity_compose_version" }
@@ -269,6 +270,6 @@ prettylogger = ["pretty_logger"]
 android_application = { id = "com.android.application", version.ref = "android_plugin_version" }
 android_library = { id = "com.android.library", version.ref = "android_plugin_version" }
 android_test = { id = "com.android.test", version.ref = "android_plugin_version" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
 kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin_version" }
 kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }

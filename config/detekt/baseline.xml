@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SmellBaseline>
+  <ManuallySuppressedIssues>
+    <ID>MagicNumber:Color.kt$0xFFD0BCFF</ID>
+    <ID>MagicNumber:Color.kt$0xFFCCC2DC</ID>
+    <ID>MagicNumber:Color.kt$0xFFEFB8C8</ID>
+    <ID>MagicNumber:Color.kt$0xFF6650a4</ID>
+    <ID>MagicNumber:Color.kt$0xFF625b71</ID>
+    <ID>MagicNumber:Color.kt$0xFF7D5260</ID>
+    <ID>TooGenericExceptionThrown:PrintTestApks.kt$PrintApkLocationTask$throw RuntimeException("Cannot check androidTest sources")</ID>
+    <ID>TooGenericExceptionThrown:PrintTestApks.kt$PrintApkLocationTask$throw RuntimeException("Cannot load APKs")</ID>
+    <ID>TooGenericExceptionThrown:PrintTestApks.kt$PrintApkLocationTask$throw RuntimeException("Expected one APK !")</ID>
+    <ID>ThrowsCount:PrintTestApks.kt$PrintApkLocationTask$@TaskAction fun taskAction()</ID>
+  </ManuallySuppressedIssues>
+  <CurrentIssues/>
+</SmellBaseline>
